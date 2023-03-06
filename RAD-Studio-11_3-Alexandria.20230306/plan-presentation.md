@@ -57,9 +57,13 @@ https://register.gotowebinar.com/register/4280764234281569631?source=Twitch
 * l'IDE a une API accessible aux développeurs d'extensions : la ToolsAPI
 https://developpeur-pascal.fr/ressources-et-informations-sur-l-open-tools-api-otapi.html
 * personnalisation de la page d'accueil de l'IDE
-* DEMO : C:\Users\Public\Documents\Embarcadero\Studio\22.0\Samples\Object Pascal\VCL\VCL WelcomePage
+* DEMO
+C:\Users\Public\Documents\Embarcadero\Studio\22.0\Samples\Object Pascal\VCL\VCL WelcomePage
+https://github.com/Embarcadero/RADStudio11Demos/tree/main/Object%20Pascal/VCL/VCL%20WelcomePage
 * personnalisation de l'éditeur de code
-* DEMO : C:\Users\Public\Documents\Embarcadero\Studio\22.0\Samples\Object Pascal\ToolsAPI\Editor Demos
+* DEMO
+C:\Users\Public\Documents\Embarcadero\Studio\22.0\Samples\Object Pascal\ToolsAPI\Editor Demos
+https://github.com/Embarcadero/RADStudio11Demos/tree/main/Object%20Pascal/ToolsAPI/Editor%20Demos
 
 ## Aide en ligne et à la saisie
 * optimisations sur LSP Serveur
@@ -122,13 +126,16 @@ https://github.com/corneliusdavid/AutoGetIt
 * des modifications sur différents composants
 * TNumberBox : la saisie de nombres quand on a une valeur minimale a été corrigée
 * DEMO : projet VCL avec composant TNumberBox
+https://github.com/DeveloppeurPascal/Delphi-samples/tree/main/VCL-Samples/011-TNumberBox-MinValue
 * TControlList : sélection multiple ajoutée
 https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Using_VCL_TControlList_Control
 https://serialstreameur.fr/webinaire-20210520.php
 * DEMO : montrer la configuration prédéfinie du TControlList sur un projet VCL vierge
 * DEMO : projet VCL TControlList avec multisélection activée par code (car c'est un helper)
+https://github.com/DeveloppeurPascal/Delphi-samples/tree/main/VCL-Samples/012-TControlList-MultiSelect
 * TTouchKeyboard : correction de la prise en charge du background provenant du style VCL du projet
 * DEMO : projet VCL avec un style et un TTouchKeyboard
+https://github.com/DeveloppeurPascal/Delphi-samples/tree/main/VCL-Samples/013-TTouchKeyboard-Style
 
 ## FireMonkey
 * des améliorations liées à la résolution d'écran (High DPI, 4K) en FMX
@@ -136,6 +143,7 @@ https://serialstreameur.fr/webinaire-20210520.php
 * optimisations sur un ensemble de composants en saisie et affichage (liées aux changements ci-dessus et aux ascenseurs)
 * correction de la propriété FocusControl sur TLabel
 * DEMO : projet FMX avec TLabel, touche de raccourci et TEdit
+https://github.com/DeveloppeurPascal/Delphi-samples/tree/main/FireMonkey-Samples/016-TLabel_Shortcut-and-Tabulation
 * amélioration de la tabulation (TAB et Shift+TAB) sur les appareils utilisant un clavier
 * modification gestion mémoire pour Android (suite à changement dans l'OS en version 12)
 * nouvelle interface IFMXPhoneDialerListenerService pour Android
@@ -145,6 +153,7 @@ https://docwiki.embarcadero.com/Libraries/Alexandria/en/FMX.PhoneDialer.IFMXPhon
 * nouveau composant TBiometricAuth pour iOS et Android
 https://docwiki.embarcadero.com/Libraries/Alexandria/en/FMX.BiometricAuth.TBiometricAuth
 * DEMO : projet FMX sur iOS/Android utilisant le TBiometricAuth
+https://github.com/DeveloppeurPascal/Delphi-samples/tree/main/FireMonkey-Samples/017-TBiometricAuth
 
 ## Platform Assistant Server (PAServer)
 * pour faire quoi ? débogage, déploiement distant, travail avec Mac, iOS et Linux
@@ -162,10 +171,10 @@ https://serialstreameur.fr/webinaire-20191105.php
 * DEMO : montrer écran de paramétrage
 * proposer alternative avec EXE Bulk Signing
 https://github.com/DeveloppeurPascal/ExeBulkSigning
-* DEMO : montrer le fonctionneemnt d'Exe Bulk Signing
+* DEMO : montrer le fonctionnement d'Exe Bulk Signing
 * rediffusion des extraits du stream Twitch du 28 février 2023 :
-- config plateformes cibles : 
-- config approvisionnements : 
+- config plateformes cibles : https://developpeur-pascal.fr/configuration-des-plateformes-cibles-dans-rad-studio-113-alexandria.html
+- config approvisionnements : https://developpeur-pascal.fr/configuration-des-informations-d-approvisionnement-dans-rad-studio-113-alexandria.html
 
 ## Bases de données
 * IB 2020 update 4 fourni en Developer Server, IBToGo et IBLite
