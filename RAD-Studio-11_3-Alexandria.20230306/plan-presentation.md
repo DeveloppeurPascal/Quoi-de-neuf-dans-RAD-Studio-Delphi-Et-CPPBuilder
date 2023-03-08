@@ -2,6 +2,7 @@
 
 ## Préalables
 * rappels fonctionnement Twitch
+https://www.twitch.tv/patrickpremartin
 * rappel pour poser des questions depuis le tchat
 * rappel pour poser des questions depuis le formulaire de contact depuis blog
 https://developpeur-pascal.fr/nous-contacter.php
@@ -9,9 +10,12 @@ https://developpeur-pascal.fr/nous-contacter.php
 ## Introduction
 * contenu présentation
 * qui suis-je ?
+https://www.linkedin.com/in/patrickpremartin/
+https://developpeur-pascal.fr
 * mes liens
 * liens utiles
 * infos Barnsten
+https://www.barnsten.com/fr/
 
 ## Embarcadero en 2022
 * page web EMB
@@ -189,5 +193,6 @@ https://docwiki.embarcadero.com
 * comment soumettre des demandes (nouveautés, corrections)
 https://quality.embarcadero.com
 * où revoir cette présentation ?
+https://serialstreameur.fr/quoi-de-neuf-dans-la-version-113-alexandria.html
 * contact Barnsten et moi
 https://www.barnsten.com/fr/
