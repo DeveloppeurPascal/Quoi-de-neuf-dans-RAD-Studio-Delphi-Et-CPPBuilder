@@ -40,7 +40,7 @@ https://quality.embarcadero.com/secure/Dashboard.jspa?selectPageId=13100
 https://docwiki.embarcadero.com/RADStudio/Alexandria/en/New_features_and_customer_reported_issues_fixed_in_RAD_Studio_11.3
 * rediffusion de la présentation officielle proposée par Embarcadero
 https://youtu.be/x-STTV2tRMA
-* session spéciale de Q&A le jeui 9 mars à 17 heures
+* session spéciale de Q&A le jeudi 9 mars à 17 heures
 https://register.gotowebinar.com/register/4280764234281569631?source=Twitch
 
 ## IDE
