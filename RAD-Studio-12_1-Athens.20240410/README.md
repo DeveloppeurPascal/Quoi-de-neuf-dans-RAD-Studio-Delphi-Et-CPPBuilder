@@ -3,7 +3,7 @@
 ![Quoi de neuf dans RAD Studio 12.1 Athens ?](Images/QuoiDeNeufRADStudio121Athens-500x282.png)
 
 * [la présentation en PDF](Quoi-de-neuf-dans-RAD-Studio-12_1-Athens.pdf)
-* [liens complémentaires](liens-complementaires.md) en lien avec cette présentation **WIP**
+* [liens complémentaires](liens-complementaires.md) en lien avec cette présentation
 
 * [des notes sur RAD Studio 12 Athens](Nouveautes-de-RAD-Studio-12-Athens.pdf)
 
