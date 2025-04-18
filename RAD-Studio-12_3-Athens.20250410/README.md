@@ -1,6 +1,6 @@
 # Quoi de neuf dans RAD Studio 12.3 Athens ? (10 avril 2025)
 
-![Quoi de neuf dans RAD Studio 12.3 Athens ?](Images/Quoi-de-neuf-dans-RAD-Studio-12_3-Athens-500x282)
+![Quoi de neuf dans RAD Studio 12.3 Athens ?](Images/Quoi-de-neuf-dans-RAD-Studio-12_3-Athens-500x282.jpg)
 
 * [la présentation en PDF](Quoi-de-neuf-dans-RAD-Studio-12_3-Athens.pdf)
 
