@@ -4,7 +4,7 @@
 
 * [la présentation en PDF](Quoi-de-neuf-dans-RAD-Studio-12_3-Athens.pdf)
 
-Les liens de la rediffusion intégrale et de sa version montée sont indiqués dans la rubrique "[RAD Studio 12.3 Athens](#RAD Studio 12.3 Athens)".
+Les liens de la rediffusion intégrale et de sa version montée sont indiqués dans la rubrique "[RAD Studio 12.3 Athens](#rad-studio-123-athens)".
 
 # Liens complémentaires
 
