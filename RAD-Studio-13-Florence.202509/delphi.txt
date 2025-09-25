@@ -1,0 +1,47 @@
+RAD Studio 13 Florence - Delphi
+
+-----
+
+Delphi ternary operator, implemented using the “if” keyword, matching the semantic of the ternary conditional operator found in other programming languages
+
+NameOf intrinsic function, to get the string representation of identifiers in code
+
+New {$PUSHOPT} and {$POPOPT} compiler directives, for taking a snapshot of the current compiler directives and applying them again
+
+New language operators: “is not” and “not in”
+
+New “noreturn” directive for procedure declaration
+
+New Delphi Upgrade Advisor wizard, which allows developers to identify meaningful changes to project configuration and code that can significantly improve the compilation time and code tooling experience.* * Available for download in the GetIt Package Manager (not included in Community Edition)
+
+Reintroduced! Delphi Classic CodeInsight for code completion, available again.
+
+Delphi 32-bit compiler and toolchain for Windows (dcc32)
+
+Delphi 64-bit compiler and toolchain for Windows (dcc64)
+
+64-bit binary versions of the Delphi 32-bit (dcc32) and Delphi 64-bit (dcc64) command line compilers, offering a very large memory address space.
+
+Delphi 64-bit compiler and toolchain for Linux Intel (dcclinux64)
+
+Delphi 64-bit compiler and toolchain for macOS Intel (dccosx64)
+
+Delphi 64-bit compiler and toolchain for macOS ARM (dccosxarm64)
+
+Delphi 64-bit compiler and toolchain for iOS devices (dcciosarm64)
+
+Delphi 64-bit compiler and toolchain for iOS Simulator on ARM 64-bit macOS (dcciossimarm64)
+
+Delphi 32-bit compiler and toolchain for Android ARM devices (dccaarm)
+
+Delphi 64-bit ARM compiler and toolchain for Android 64-bit platform (dccaarm64)
+
+Earlier version licenses included in network licenses (Delphi 2007–12, C++ Builder 2007–12). Delphi 7 and C++Builder 6 available separately (Professional only)
+
+Access to licenses and downloads for earlier versions with purchase of standalone product licenses (Delphi 2007–12, C++Builder 2007–12, Delphi 7, and C++Builder 6) (Professional only)
+
+Custom managed records with the ability to define custom Initialize, Finalize and Assign operations, executed when a record is allocated, de-allocated, and copied. Improved in 13 with implicit “Self” parameter declaration in record class operators Initialize and Finalize.
+
+Support for calling WinRT APIs, with over 50 specific Object Pascal interface units. The set of headers has been updated in version 13
+
+Delphi Win64 LLDB-based debugger in the 64-bit IDE. Updated to LLDB 20.

@@ -1,0 +1,16 @@
+L'IA dans RAD Studio 13 Florence
+
+-----
+
+SmartCore AI Component Pack – Your Gateway to AI inside Your Apps: a new set of core AI components designed to help our customers add AI features to their apps or build brand new AI-focused apps with Delphi or C++Builder.(*)
+(*) Available for download in the GetIt Package Manager (not included in Community Edition)
+
+The AI-engine agnostic connection component will use specific drivers to communicate via REST with different AI engines (including OpenAI, Claude, Gemini and Ollama). The configuration is managed via an easy-to-use AI connection wizard.
+
+A set of AI request components for different data types (like text, images, structure data) which can be associated with prompts and can be bound directly with UI controls to display the results.
+
+A set of AI request components for different data types (like text, images, structure data) which can be associated with prompts and can be bound directly with UI controls to display the results.
+
+New RAD AI Companion Web Site, a RAD Studio tailored chat bot, offering the ability to query an AI specifically trained on our product and its libraries or to ask it to generate application source code.
+
+Smart CodeInsight offers AI Powered Coding helpers. Smart CodeInsight is an open architecture for AI plugins. Smart CodeInsight UI elements in the IDE include a chat pane (with Markdown support since version 12.3) and an editor menu with direct commands on the selected code. Smart CodeInsight offers an OpenTools API and developers can write plugins for additional LLM engines and APIs. Includes a new Test Connection feature in the configuration dialog.

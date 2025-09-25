@@ -1,0 +1,13 @@
+Nouveautés de la RTL dans RAD Studio 13 Florence
+
+-----
+
+Expanded support for Unsigned Big Integer database fields
+
+FireDAC Oracle driver to support v 19c and 128-character parameter names for Oracle Stored Procedures. Previous updates included, among many features, support for VARCHAR2, NVARCHAR2, and RAW data types up to 32K, native BOOLEAN in PL/SQL, 64-bit integers and unsigned INTs, identity / auto-increment columns, query change notifications, implicit ROWID fetching, implicit results, additional connection modes, network timeouts, and transaction state detection and synchronization. Since version 12.3, with support for Oracle DRCP (Database Resident Connection Pooling). Version 13 adds OAuth authentication for Oracle.
+
+FireDAC Firebird 5 driver. Includes with VendorHome driver configuration, support for Firebird embedded and local connection protocol, FB$OUT package, long statements, little/big endian configuration, Firebird 4 data types, FDFBBackup parallel operations for Firebird 5. Enhanced with parallel backup operations support.
+
+FireDAC PostgreSQL driver for PostgreSQL up to version 16. Past updates included PostgreSQL 15 specific performance improvements. support for PostgreSQL Stored Procedures, identity columns, macaddr8, password encryption and little/big endian configuration in connection parameters. Enhanced with support for array types.
+
+InterBase 2020 Update 6 Developer Edition. Includes a license for the upcoming InterBase 15 Developer edition.

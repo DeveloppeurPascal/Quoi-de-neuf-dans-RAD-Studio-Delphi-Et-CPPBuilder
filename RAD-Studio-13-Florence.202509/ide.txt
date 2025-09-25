@@ -1,0 +1,18 @@
+Nouveautés de l'IDE dans RAD Studio 13 Florence
+
+-----
+
+Extensive and configurable search features in many IDE panes, including the Project Manager, the Structure View, the Message pane and Events log
+
+Additional highlighting options in the Message Log and grouping for compiler hints and warnings in the same source code file.
+
+Attach to Process dialog box redesigned to include additional columns that display information about processes
+
+RAD Studio 64-bit IDE, offering support for the Windows 64-bit targets platform. The 64-bit IDE is installed side by side with the 32-bit IDE, which is still the default version. Now including: code tooling for C++ via Visual Assist; support for COM, ActiveX and Type libraries; Live Templates (Ctrl+J) and the Surround menu, and quality improvements.
+
+Visual Assist features include finding where your code is used with Find References or Find Symbol, refactorings which assist maintenance and active development in code, and navigation including the Go To Related feature. See the Refactoring section for more information. Available also in 64-bit IDE.
+
+GetIt Library Manager for easy discovery, download and update of source code libraries, components, and other features from Embarcadero GetIt servers(*). Enhanced in 13 with package versioning support.
+(*) Use of GetIt requires Internet connectivity. The feature is not available to off-line developers. A small selection of packages is available as a separate download and can be installed using the GetIt Local Packages support.
+
+IDE ToolsAPI further extended in 13. In 12 it added direct access to editor content and more information about the editor display. Version 11.3 added support for painting in the code editor and highlighting elements of the source code, a foundation allowing developers to customize the editor.
