@@ -1,0 +1,87 @@
+RAD Studio 13 Florence - Delphi
+
+-----
+
+# Liens
+
+https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-florence/
+
+https://blogs.embarcadero.com/coming-in-rad-studio-13-a-conditional-ternary-operator-for-the-delphi-language/
+
+https://blogs.embarcadero.com/heres-whats-coming-in-a-busy-september-plus-a-cool-demo-of-the-delphi-ternary-operator/
+
+https://blogs.embarcadero.com/introducing-the-delphi-upgrade-advisor-wizard/
+
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Delphi_Upgrade_Advisor_Wizard
+
+# Langage Pascal - Object Pascal
+
+Delphi ternary operator, implemented using the “if” keyword, matching the semantic of the ternary conditional operator found in other programming languages
+
+NameOf intrinsic function, to get the string representation of identifiers in code
+
+New language operators: “is not” and “not in”
+
+New “noreturn” directive for procedure declaration
+
+Custom managed records with the ability to define custom Initialize, Finalize and Assign operations, executed when a record is allocated, de-allocated, and copied. Improved in 13 with implicit “Self” parameter declaration in record class operators Initialize and Finalize.
+
+Ajout d'une contrainte "interface" aux types génériques.
+
+
+
+# Mises à jour des SDK et API des OS
+
+Support for calling WinRT APIs, with over 50 specific Object Pascal interface units. The set of headers has been updated in version 13
+
+Set of units with the complete Windows API headers converted to Object Pascal. This API conversion includes 311 Delphi header fi les(*) with 41 MB of code, covering the entire platform API provided by Microsoft.
+(*) Available for download in the GetIt Package Manager (not for Community Edition)
+
+Microsoft Windows SDK support for Windows 11, 10 and 7 APIs. Includes support for calling both classic Win32/Win64 APIs and enhanced support for WinRT APIs; required for the Windows App SDK (aka Project Reunion)
+
+The new release includes significant work in terms of Windows APIs cleanup, updated WinRT APIs, refreshed the WinAPI WinMD projection, and updated the WebView 2 control integrated in TEdgeBrowser. All of these updates provide an enhanced experience for Windows application developers.
+
+# Editeur de code
+
+Delphi Classic CodeInsight for code completion, available again.
+
+Smart CodeInsight offers AI Powered Coding helpers. Smart CodeInsight is an open architecture for AI plugins. Smart CodeInsight UI elements in the IDE include a chat pane (with Markdown support since version 12.3) and an editor menu with direct commands on the selected code. Includes a new Test Connection feature in the configuration dialog.
+
+# Compilateur(s)
+
+New {$PUSHOPT} and {$POPOPT} compiler directives, for taking a snapshot of the current compiler directives and applying them again
+
+64-bit binary versions of the Delphi 32-bit (dcc32) and Delphi 64-bit (dcc64) command line compilers, offering a very large memory address space.
+
+Delphi 32-bit compiler and toolchain for Windows (dcc32)
+
+Delphi 64-bit compiler and toolchain for Windows (dcc64)
+
+Delphi 64-bit compiler and toolchain for Linux Intel (dcclinux64)
+
+Delphi 64-bit compiler and toolchain for macOS Intel (dccosx64)
+
+Delphi 64-bit compiler and toolchain for macOS ARM (dccosxarm64)
+
+Delphi 64-bit compiler and toolchain for iOS devices (dcciosarm64)
+
+Delphi 64-bit compiler and toolchain for iOS Simulator on ARM 64-bit macOS (dcciossimarm64)
+
+Delphi 32-bit compiler and toolchain for Android ARM devices (dccaarm)
+
+Delphi 64-bit ARM compiler and toolchain for Android 64-bit platform (dccaarm64)
+
+# Débogueur(s)
+
+Delphi Win64 LLDB-based debugger in the 64-bit IDE. Updated to LLDB 20.
+
+# Outils et assistants
+
+New Delphi Upgrade Advisor wizard, which allows developers to identify meaningful changes to project configuration and code that can significantly improve the compilation time and code tooling experience.(*)
+(*) Available for download in the GetIt Package Manager (not included in Community Edition)
+
+# Licences
+
+Earlier version licenses included in network licenses (Delphi 2007–12, C++ Builder 2007–12). Delphi 7 and C++Builder 6 available separately (Professional only)
+
+Access to licenses and downloads for earlier versions with purchase of standalone product licenses (Delphi 2007–12, C++Builder 2007–12, Delphi 7, and C++Builder 6) (Professional only)

@@ -2,6 +2,21 @@ Nouveautés de la RTL dans RAD Studio 13 Florence
 
 -----
 
+# Liens
+
+https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-florence/
+
+# SDK et APIs
+
+Support for calling WinRT APIs, with over 50 specific Object Pascal interface units. The set of headers has been updated in version 13
+
+Retrait des APIs et spécificitées liées à Windows 98 encore présente dans la VCL et RTL
+
+
+The new release includes significant work in terms of Windows APIs cleanup, updated WinRT APIs, refreshed the WinAPI WinMD projection, and updated the WebView 2 control integrated in TEdgeBrowser. All of these updates provide an enhanced experience for Windows application developers.
+
+# Bases de données
+
 Expanded support for Unsigned Big Integer database fields
 
 FireDAC Oracle driver to support v 19c and 128-character parameter names for Oracle Stored Procedures. Previous updates included, among many features, support for VARCHAR2, NVARCHAR2, and RAW data types up to 32K, native BOOLEAN in PL/SQL, 64-bit integers and unsigned INTs, identity / auto-increment columns, query change notifications, implicit ROWID fetching, implicit results, additional connection modes, network timeouts, and transaction state detection and synchronization. Since version 12.3, with support for Oracle DRCP (Database Resident Connection Pooling). Version 13 adds OAuth authentication for Oracle.

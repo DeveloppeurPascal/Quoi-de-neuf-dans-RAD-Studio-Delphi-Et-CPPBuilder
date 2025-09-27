@@ -1,0 +1,43 @@
+RAD Studio 13 Florence et le web
+
+-----
+
+# Liens
+
+https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-florence/
+
+https://blogs.embarcadero.com/webstencils-is-about-to-get-more-powerful-in-rad-studio-13/
+
+https://blogs.embarcadero.com/webstencils-whats-new-in-rad-studio-13-0-florence/
+
+# RTL
+
+# Composants
+
+VCL : TEdgeBrowser Component integrating Microsoft’s Chromium-based Edge WebView2 component and changes to the TWebBrowser component to support both IE and Edge– based on Microsoft release version of Edge WebView2 component and supporting custom cache folders, with support for the UserDataFolder and the ExecutableFolder configurations. Enhanced in 13.0 with additional properties and methods, mapped to features in recent versions of the WebView 2 control.
+
+FMX : WebBrowser component for Windows, with support for both the classic IE ActiveX and the Microsoft WebView 2 control (Chromium-based Edge). Updated in version 13.
+
+# WebBroker
+
+WebBroker sessions management
+
+WebBroker library for HTTP server development and integration, supporting CGI, ISAPI libraries for Microsoft IIS, Apache HTTP server modules, and native HTTP servers based on Indy library. Extended in 13 with better Apache integration, Nginx web server support, and improved logging.
+
+# RAD Server
+
+Enterprise editions include free RAD Server Lite (RSLite) deployment and a single site RAD Server deployment license, while Architect editions include a multi-site deployment license
+
+Add support for server API versioning (that is, having a server offering multiple versions of the same REST APIs for older and newer client applications)
+
+RAD Server turnkey REST based middleware stack that includes API hosting, data access, and SQL Database access, with significantly optimized performance
+
+RAD Server (EMS) multi-tenancy support and console app for managing tenants configuration (on Windows and Linux). Version 13 adds to the RAD Server Multi-tenancy support an option to integrate tenant-specific configuration.
+
+Mise à jour du conteneur Docker pour RAD Server Lite
+
+# WebStencils
+
+WebStencils server-side script-based integration and processing of HTML files, to develop modern websites based on any JavaScript library, powered by the data extracted and processed by a RAD Studio server-side application. This is a sophisticated architecture introduced in RAD Studio 12.2, significantly extended in 13 with support for session data, global variables, a new switch statement, integrated WebBroker sessions authentication and authorization, direct access to dataset properties.
+
+Use the WebStencils components, TWebStencilsProcessor and TWebStencilsEngine, to customize the template engine, control the file locations and the URL mapping, define URL parameters, and pass objects, datasets and collections to the scripts. The TWebStencilProcessor component implements the same interface of the old TPageProducer used in WebBroker and DataSnap and can replace it.
