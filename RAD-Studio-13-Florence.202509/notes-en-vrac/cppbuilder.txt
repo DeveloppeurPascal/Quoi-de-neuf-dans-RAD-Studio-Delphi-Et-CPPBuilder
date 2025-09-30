@@ -8,6 +8,8 @@ https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-flore
 
 https://blogs.embarcadero.com/coming-in-florence-clang-20-based-cbuilder-compiler-introduces-c23-support/
 
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
 # Langage C++
 
 Ajout du support de C++ version 23 à la cible "Windows 64 (moderne)"
@@ -17,6 +19,18 @@ Updated Win64 C++ Clang 20 STL using libc++, including RTL, C RTL, and toolchain
 
 improved Address Sanitizer (ASAN) runtime
 
+C++Win64 Modern Platform Updated to Clang 20
+The RAD Studio Florence 13.0 release updates the Modern Win64 C++ compiler from Clang 15 (the version shipped in 12.x) to Clang version 20. The new Clang-based compiler introduces C++23 support. Also, this release updates all of the other elements of the Modern Win64 C++ toolchain.
+
+This release brings significant enhancements focused on modern C++ standards, compatibility, and stability. Below are the key improvements included in this release:
+
+LLVM Toolchain Upgrade (v20): The toolchain has been upgraded from LLVM v15 to LLVM v20. This update supports recent C++ standards and compiler optimizations.
+Improved ASAN Support: The AddressSanitizer (ASAN) runtime is now fixed for compatibility with Windows 11.
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Safety
+New C++ Standard Option: BCC64X now defaults to C++23, but users can choose to target C++20 or C++17 as needed.
+https://docwiki.embarcadero.com/RADStudio/Florence/en/BCC64X
+Versioned RTL/STL Shared Libraries: Shared runtime libraries (e.g., libc++.dll) are now suffixed with the BDS version number (e.g., libc++-370.dll). This prevents runtime conflicts when multiple versions of RAD Studio are installed.
+Resolved Legacy Issues: Numerous bugs and inconsistencies present in LLVM v15 and previous toolchain versions have been addressed in this release.
 
 # IDE
 
@@ -25,6 +39,8 @@ RAD Studio 64-bit IDE, offering support for the Windows 64-bit targets platform.
 Visual Assist features include finding where your code is used with Find References or Find Symbol, refactorings which assist maintenance and active development in code, and navigation including the Go To Related feature. See the Refactoring section for more information. Available also in 64-bit IDE.
 
 Smart CodeInsight offers AI Powered Coding helpers. Smart CodeInsight is an open architecture for AI plugins. Smart CodeInsight UI elements in the IDE include a chat pane (with Markdown support since version 12.3) and an editor menu with direct commands on the selected code. Includes a new Test Connection feature in the configuration dialog.
+
+Visual Assist se recharge automatiquement en cas de changement de projet ou d'activation d'un projet dans un groupe, de changer une plateforme, ... pour s'ssurer qu'il est cohérent avec la chaîne de compilation qui sera utilisée et n'affiche pas d'anomalies erronées
 
 # Compilateur
 
@@ -35,6 +51,10 @@ Updated Win64 C++ Clang 20 compiler, introducing support for C++23 language spec
 # Débogueur
 
 Debugger for C++ for Win64, based on LLDB, including formatters to evaluate common complex types like UnicodeString and AnsiString, C++ strings, vectors, deques, and more. Updated to LLDB 20.
+
+Improved how OutputDebugStringW handles Unicode output.
+Wide character values that are non-printing are now displayed using the correct format in debugger output.
+argc and argv now correctly handle arguments with spaces when running under the debugger.
 
 # Licences
 

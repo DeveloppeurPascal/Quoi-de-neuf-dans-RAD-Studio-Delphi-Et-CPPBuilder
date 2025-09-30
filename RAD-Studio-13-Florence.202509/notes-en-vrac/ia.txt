@@ -10,9 +10,18 @@ https://blogs.embarcadero.com/introducing-the-smartcore-ai-components-pack/
 
 https://docwiki.embarcadero.com/RADStudio/Florence/en/SmartCore_AI_Component_Pack
 
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
 # IDE
 
 Smart CodeInsight offers AI Powered Coding helpers. Smart CodeInsight is an open architecture for AI plugins. Smart CodeInsight UI elements in the IDE include a chat pane (with Markdown support since version 12.3) and an editor menu with direct commands on the selected code. Smart CodeInsight offers an OpenTools API and developers can write plugins for additional LLM engines and APIs. Includes a new Test Connection feature in the configuration dialog.
+
+Also, this release added the new Test Connection button in the Smart CodeInsight Options page. Now, users can directly test the configuration without having to try out the chat.
+
+Other improvements include:
+
+Models that return “<think>” as part of the response before returning the actual information. In this case, the IDE removes the “thinking” tags.
+Improved the hints for the buttons in the Smart CodeInsight Chat Window, to show their shortcuts.
 
 # Composants
 

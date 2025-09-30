@@ -14,6 +14,8 @@ https://blogs.embarcadero.com/introducing-the-delphi-upgrade-advisor-wizard/
 
 https://docwiki.embarcadero.com/RADStudio/Florence/en/Delphi_Upgrade_Advisor_Wizard
 
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
 # Langage Pascal - Object Pascal
 
 Delphi ternary operator, implemented using the “if” keyword, matching the semantic of the ternary conditional operator found in other programming languages
@@ -22,12 +24,12 @@ NameOf intrinsic function, to get the string representation of identifiers in co
 
 New language operators: “is not” and “not in”
 
-New “noreturn” directive for procedure declaration
+New “noreturn” directive for procedure declaration pour masquer l'erreur W1035 "résultat de fonction indéfinit"
 
 Custom managed records with the ability to define custom Initialize, Finalize and Assign operations, executed when a record is allocated, de-allocated, and copied. Improved in 13 with implicit “Self” parameter declaration in record class operators Initialize and Finalize.
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Custom_Managed_Records#Implicit_Self_parameter_declaration
 
-Ajout d'une contrainte "interface" aux types génériques.
-
+Ajout d'un type de contrainte "interface" et "unmanaged" aux types génériques. Ca permettra de faire du transtypage sur des éléments génériques. Un exemple est fourni sur la page "what's new".
 
 
 # Mises à jour des SDK et API des OS
@@ -50,6 +52,14 @@ Smart CodeInsight offers AI Powered Coding helpers. Smart CodeInsight is an open
 # Compilateur(s)
 
 New {$PUSHOPT} and {$POPOPT} compiler directives, for taking a snapshot of the current compiler directives and applying them again
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Option_OPT_(Delphi)
+
+extension de {$IFOPT} qui peut maintenant utiliser la version longue des directives
+https://docwiki.embarcadero.com/RADStudio/Florence/en/IFOPT_directive_(Delphi)
+
+nouvelle directive $WEAKPACKAGEUNIT (par défaut à OFF pour maintenir le fonctionnement actuel) pour gérer la présence d'une unité dans un package avec lequel elle est censée être compilée ou pas, peut avoir des effets sur des variables globales lorsqu'elle est activée et empêcher la compilation de projets existants
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Weak_packaging
+=> utile pour simplifier la gestion de dépendances entre unités communes à plusieurs packages ou liées à des dépendances externes comme des DLLs
 
 64-bit binary versions of the Delphi 32-bit (dcc32) and Delphi 64-bit (dcc64) command line compilers, offering a very large memory address space.
 
@@ -74,6 +84,13 @@ Delphi 64-bit ARM compiler and toolchain for Android 64-bit platform (dccaarm64)
 # Débogueur(s)
 
 Delphi Win64 LLDB-based debugger in the 64-bit IDE. Updated to LLDB 20.
+
+Scoped enumeration values now remain contained adequately within their declared type, avoiding conflicts in the global namespace. Also, these values are now rendered accurately in debugger views.
+Object member set values are now displayed correctly during debugging.
+Class variable names are now correctly resolved, with improved name mangling.
+Unicode variable handling has been improved; the debugger now accepts a broader range of Unicode identifiers.
+
+possibilité d'utiliser une mise en forme colorée dans les fenêtres de débogage (à activer depuis tools / options / debugger)
 
 # Outils et assistants
 

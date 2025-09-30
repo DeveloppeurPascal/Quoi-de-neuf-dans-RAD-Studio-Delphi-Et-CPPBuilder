@@ -6,21 +6,61 @@ Nouveautés de l'IDE dans RAD Studio 13 Florence
 
 https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-florence/
 
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
+https://docwiki.embarcadero.com/RADStudio/Florence/en/ToolsAPI_Support_for_the_Code_Editor
+
+# Généralités
+
+Uniformisation des numéros de version et dossiers de stockage pour repartir sur une numérotation plus cohérente. Cette version est donc la 37. Les numéros à jours sont disponibles dans la doc et le dépôt https://github.com/omonien/Delphi-Version-Information si vous voulez conditionner du code en fonction de la version de la RTL ou des compilateurs.
+
+des changements ont été apportées au thème sombre pour améliorer la lisibilité de certains éléments
+
+# Installeur
+
+Windows SDK est à installer avant de lancer l'installation, les rubriques nécessaires sont détaillées dans le What's New. Il est utile pour C++Builder, le déploiement Windows Store et les signatures d'exécutables pour Delphi.
+
 # IDE 64 bits
 
 Ce n'est plus une option, il est installé à côté de l'IDE 32 bits et possède les mêmes fonctionnalités mais limité aux projets Windows 64 bits pour le moment.
 
 RAD Studio 64-bit IDE, offering support for the Windows 64-bit targets platform. The 64-bit IDE is installed side by side with the 32-bit IDE, which is still the default version. Now including: code tooling for C++ via Visual Assist; support for COM, ActiveX and Type libraries; Live Templates (Ctrl+J) and the Surround menu, and quality improvements.
 
+Support for Code Templates (Ctrl-J), including the Surround menu.
+Support for Type libraries, ActiveX, and COM.
+VA for C++Builder integration in the 64-bit IDE.
+Implemented a new debugger engine to debug C++ and Delphi Applications.
+Major improvements in the Delphi debugger performance.
+Made pointer addresses look more Delphi-style.
+Removed the Together-based features, including Modeling, Audits, and Metrics.
+
 # UI
 
 Extensive and configurable search features in many IDE panes, including the Project Manager, the Structure View, the Message pane and Events log
 
+ajout de différents types de recherche pour les zones ayant djà un système de recherche (inspecteur d'objets, événements, palette) pour coller aux nouvelles options disponibles ailleurs dans l'IDE.
+
 Additional highlighting options in the Message Log and grouping for compiler hints and warnings in the same source code file.
+
+In the IDE, you can now use the editor background color for editor tabs, activate the IDE theme for Structural Highlight colors, and copy error messages from the structure pane.
+=> go to tools / options / editor / tabs
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Tabs
+
+ajout d'une nouvele fonction permettant de mettre en avant/couleur la structure du code source
+=> go to tools / options / editor / color / structural highlightings
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Structural_Highlighting
+
+par défaut le double buffering est maintenant activé dans l'IDE. s'il y a des soucis, notamment en remote desktop il est possible de le désactiver dans la clé "Globals\SingleBufferingInRemoteSessions" de la base de registres
 
 # Débogage
 
 Attach to Process dialog box redesigned to include additional columns that display information about processes
+
+For the debugger, we have moved our LLDB-based debuggers to version 20 of LLDB, matching the update of the C++ compiler to Clang 20. We have also improved the quality of the debugger, focusing primarily on the 64-bit IDE debug experience. 
+
+lorsqu'une exception est reçue par l'IDE il affichera maintenant la pile d'appel directement, ce n'était pas le cas jusque là
+
+les messages affichés dans la structure sont maintenant copiables (on les retrouve aussi à d'autres emplacements de l'IDE où ils sont également copiables)
 
 # Editeur de code
 
@@ -30,15 +70,26 @@ Delphi Classic CodeInsight for code completion, available again.
 
 Smart CodeInsight offers AI Powered Coding helpers. Smart CodeInsight is an open architecture for AI plugins. Smart CodeInsight UI elements in the IDE include a chat pane (with Markdown support since version 12.3) and an editor menu with direct commands on the selected code. Includes a new Test Connection feature in the configuration dialog.
 
+les projets utilisant le gestionnaire de versions "git" peuvent maintenant préciser un token à la place des user/password pour GitHub (ça devrait passer pour les autres outils basés sur le même fonctionnement)
+
 # Extensions
 
 IDE ToolsAPI further extended in 13. In 12 it added direct access to editor content and more information about the editor display. Version 11.3 added support for painting in the code editor and highlighting elements of the source code, a foundation allowing developers to customize the editor.
 
+Added a new method to update the UI for the Welcome Page.
+INTAWelcomePageDataPluginListView370.Invalidate
+Added support to allow mouse events to be intercepted as clicks.
+Cursor Moved Event
+Key Pressed Event
+
 Smart CodeInsight offers an OpenTools API and developers can write plugins for additional LLM engines and APIs.
 
-GetIt Library Manager for easy discovery, download and update of source code libraries, components, and other features from Embarcadero GetIt servers(*). Enhanced in 13 with package versioning support.
-(*) Use of GetIt requires Internet connectivity. The feature is not available to off-line developers. A small selection of packages is available as a separate download and can be installed using the GetIt Local Packages support.
+Modifications sur GetIt : possbilité d'installer des paquets dans différnetes versions, menu contextuel permettant d'accéder au dossier d'installation d'un paquet, d'autres options selon les cas.
+
+Dans la configuration des dépendances au niveau des options d'un projet il est possible de définir la version du paquet concerné.
 
 # Options
 
 Nouveau compilateur de ressources, le choix étant possible au niveau des options d'environnement
+=> utilisation par défaut de resinator https://github.com/squeek502/resinator
+=> utilisation du compilateur historique ou de celui de Microsoft possible dans les options de l'IDE

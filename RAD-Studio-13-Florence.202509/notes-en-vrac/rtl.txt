@@ -6,23 +6,143 @@ Nouveautés de la RTL dans RAD Studio 13 Florence
 
 https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-florence/
 
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
 # SDK et APIs
 
 Support for calling WinRT APIs, with over 50 specific Object Pascal interface units. The set of headers has been updated in version 13
 
 Retrait des APIs et spécificitées liées à Windows 98 encore présente dans la VCL et RTL
 
-
 The new release includes significant work in terms of Windows APIs cleanup, updated WinRT APIs, refreshed the WinAPI WinMD projection, and updated the WebView 2 control integrated in TEdgeBrowser. All of these updates provide an enhanced experience for Windows application developers.
 
-# Bases de données
+# en vrac
 
-Expanded support for Unsigned Big Integer database fields
+mise à jour de DUnitX en 0.4.1 (juin 2025)
+
+Added a case-insensitive version of the TStringHelper.Contains function.
+https://docwiki.embarcadero.com/Libraries/Florence/en/System.SysUtils.TStringHelper.Contains
+
+Added the System.StrUtils.LiteralToInt unit of functions that supports "_" and "%binary nums". As a consequence, TIntegerProperty and TInt64Property classes now use TryLiteralToInt.
+
+Added new TPath.Exists.
+https://docwiki.embarcadero.com/Libraries/Florence/en/System.IOUtils.TPath.Exists
+
+Added ReadUInt64 and WriteUInt64 to the TRegistry class.
+
+TThreadedQueue now has a Count property for naming consistency.
+
+Updated TDictionary<K,V> and TOrderedDictionary<K,V>. Casting TOrderedDictionary to TDictionary preserves TOrderedDictionary behavior.
+
+The constructors for synchronization classes TMutex, TSemaphore, and TEvent now set the THandleObject.LastError property before returning to the caller.
+
+There is a TStringList constructor with the signature:
+constructor Create(Options: TStringsOptions; Duplicates: TDuplicates = dupIgnore); overload;
+
+#RTTI
+
+The System.RTTI unit has a new GetStorageSize function to read the number of bytes required to store a value of that type in memory.
+
+Added a new TSizeF.Zero method.
+
+For debugging deadlock scenarios, we added the WriterID property to IReadWrite/TMultiReadExclusiveWriteSync.
+
+Restructured TRttiDataMember by introducing a new intermediate class:
+* TRttiPlaceMember
+* TRttiDataMember
+* TRttiIndexedProperty
+
+# JSON Processing
+
+This section lists JSON-related updates:
+
+Added the TJsonOption joIgnoreDefault and joIgnoreSpecial attributes.
+https://docwiki.embarcadero.com/Libraries/Florence/en/REST.Json.TJsonOption
+
+TMarshalUnmarshalBase.ValueSerialization: TJsonValueSerialization with jvExcludeSpecial default.
+https://docwiki.embarcadero.com/Libraries/Florence/en/REST.JsonReflect.TMarshalUnmarshalBase.ValueSerialization
+
+TJSONValue.GetValue<T>(const APath: string; ADefaultValue: T): T behavior is changed: It finds a JSON value if possible. If found, the JSON value is converted to a specified type. If not found, or if it cannot be restored, or if the JSON value is null, then it returns a default value.
+https://docwiki.embarcadero.com/Libraries/Florence/en/System.JSON.TJSONValue.GetValue
+
+The TJSONNumber class is now inherited directly from the TJSONValue class.
+
+The TJSONString class is marked as "sealed".
+
+TJsonReader now has ReadAsUInt64.
+
+The JSON Serializer offers the option to skip properties with default values:
+* New TJsonConverter.CanWrite(AValue) overloaded method.
+* There is a TJsonSerializer.MemberSerialization: TJsonMemberSerialization property with TJsonMemberSerialization.Fields as default.
+https://docwiki.embarcadero.com/Libraries/Florence/en/System.JSON.Serializers.TJsonSerializer.MemberSerialization
+
+# DataBase RTL
+
+This section lists updates and enhancements made to the DataBase RTL:
+
+Added a new field type to TFieldType to support Unsigned Big Integer. There is now a TFieldType.ftLargeUint type. FireDAC supports it through Oracle and MySQL drivers, as well as the TFDMemTable.
+https://docwiki.embarcadero.com/Libraries/Florence/en/Data.DB.TFieldType
+
+Added a new EllipsisPosition property to the VCL TDBText component, working in the same way as with TLabel.
+https://docwiki.embarcadero.com/Libraries/Florence/en/Vcl.DBCtrls.TDBText.EllipsisPosition
+
+Added new DataSet properties to access the attached DataSource objects:
+* TDataSet.DataSourceCount property.
+https://docwiki.embarcadero.com/Libraries/Florence/en/Data.DB.TDataSet.DataSourceCount
+* TDataSet.DataSources property.
+https://docwiki.embarcadero.com/Libraries/Florence/en/Data.DB.TDataSet.DataSources
+
+Added an overloaded DrpCtrls.RegisterFieldControl procedure that allows a custom setup of the created custom dataware control, see the example below:
+uses DrpCtrls;
+  RegisterFieldControl(TIntegerField, 'TDBLabeledEdit',
+    procedure (Control: TControl; DataSource: TDataSource; Field: TField)
+    var
+      LEdit: TDBLabeledEdit;
+    begin
+      LEdit := Control as TDBLabeledEdit;
+      LEdit.DataSource := DataSource;
+      LEdit.DataField := Field.FullName;
+      LEdit.EditLabel.Caption := Field.DisplayLabel;
+    end);
+
+# FireDAC
 
 FireDAC Oracle driver to support v 19c and 128-character parameter names for Oracle Stored Procedures. Previous updates included, among many features, support for VARCHAR2, NVARCHAR2, and RAW data types up to 32K, native BOOLEAN in PL/SQL, 64-bit integers and unsigned INTs, identity / auto-increment columns, query change notifications, implicit ROWID fetching, implicit results, additional connection modes, network timeouts, and transaction state detection and synchronization. Since version 12.3, with support for Oracle DRCP (Database Resident Connection Pooling). Version 13 adds OAuth authentication for Oracle.
 
 FireDAC Firebird 5 driver. Includes with VendorHome driver configuration, support for Firebird embedded and local connection protocol, FB$OUT package, long statements, little/big endian configuration, Firebird 4 data types, FDFBBackup parallel operations for Firebird 5. Enhanced with parallel backup operations support.
 
 FireDAC PostgreSQL driver for PostgreSQL up to version 16. Past updates included PostgreSQL 15 specific performance improvements. support for PostgreSQL Stored Procedures, identity columns, macaddr8, password encryption and little/big endian configuration in connection parameters. Enhanced with support for array types.
+
+Added support for parallel operation in TFDFBBackup for Firebird 5.0+. ParallelWorkers (TFDIBBackup, TFDIBRestore, and TFDIBValidate) specifies the number of parallel workers used by a service manager to execute requested jobs.
+
+TFDMemTable supports RecsSkip and RecsMax. The RecsSkip and RecsMax settings are applied when the Filter property is set to True.
+
+Added flexibility to FireDAC when returning textual data for PostgreSQL array types. The following are the two ways to show relacl fields as a readable text:
+* to cast a field - relacl::TEXT
+* to set ResourceOptions.DirectExecute to True. Then, FireDAC internally will use PostgreSQL's textual format for result sets.
+
+Converted some transaction-related methods in the TFDCustomConnection and TFDCustomTransaction classes into virtual methods to help customize the behavior of derived classes.
+
+TFDMemTable allows loading standard JSON (not generated by saving data from FireDAC) using the new TFDStorageFormat.sfFreeFormJSON.
+Examples:
+FDMemTable1.LoadFromFile('test.json', sfFreeFormJSON);
+FDMemTable1.SaveToFile('test2.json', sfFreeFormJSON).
+
+For Oracle connections, RAD Studio Florence 13.0 adds support for OAuth 2.0 authentication within the FireDAC TFDConnection component in Delphi.
+* New connection definition parameters:
+OAuth_Token - specifies an OAuth2 or IAM token. Requires Oracle 19.13.
+OAuth_PrivKey - specifies IAM PoP private key. When specified, then IAM token-based authentication is used; otherwise, Azure OAuth2 authentication is used. Requires Oracle 19.13.
+* Use the TOAuth2Authenticator component to get an OAuth2 token. Use FireDAC Automatic Connection Recovery to renew and submit a new token.
+
+# DataSnap
+
+This release adds certificate validation events to TFDConnection and TDSClientCallbackChannelManager, which can use HTTPS as transport:
+
+TFDConnection.ValidatePeerCertificate.
+https://docwiki.embarcadero.com/Libraries/Florence/en/FireDAC.Comp.Client.TFDConnection.ValidatePeerCertificate
+TDSClientCallbackChannelManager.ValidatePeerCertificate.
+https://docwiki.embarcadero.com/Libraries/Florence/en/Datasnap.DSCommon.TDSClientCallbackChannelManager.ValidatePeerCertificate
+
+# divers
 
 InterBase 2020 Update 6 Developer Edition. Includes a license for the upcoming InterBase 15 Developer edition.

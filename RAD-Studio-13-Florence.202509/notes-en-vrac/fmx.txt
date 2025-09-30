@@ -9,26 +9,55 @@ https://blogs.embarcadero.com/heres-how-to-use-rad-studio-with-ios-26-and-xcode-
 
 https://blogs.embarcadero.com/introducing-the-smartcore-ai-components-pack/
 
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
+# généralités
+
+la création d'une nouvelle fiche FMX ne passe plus par l'assistant donnant le choix entre HD et 3D, il y a maintenant deux options séparées.
+
+
 # Composants
-
-New MaskEdit component
-
-New ApplicationEvents component
 
 SmartCore AI Component Pack – Your Gateway to AI inside Your Apps: a new set of core AI components designed to help our customers add AI features to their apps or build brand new AI-focused apps with Delphi or C++Builder.(*)
 (*) Available for download in the GetIt Package Manager (not included in Community Edition)
 
+The framework also offers increased performance when copying bitmaps, by leveraging the GPU
+
+MaskEdit Control
+RAD Studio Florence 13.0 introduces a new MaskEdit control for FireMonkey that includes a specific designer for input masks.
+Unlike the VCL counterpart, in the FMX TMaskEdit implementation, an exception is not raised if the current value in the MaskEdit is not valid. Instead, it is recommended to use the OnValidateError event. This event allows the developer to provide any visual feedback to the user about an invalid value. If the value is still incorrect after the focus reset, it remains in the invalid state, and the OnChange event is not triggered until the value becomes valid.
+
+additional TPresentedScrollBox properties to control scroll animation, bounces, and touch interaction
+
+updated TAlignLayout to include new alignment options for centering controls
+
+a new ApplicationEvents component.
+
+TForm.OnSafeAreaChange (?)
+
 # Services de plateforme
 
 New Display Link Service offering highly improved stability and smoothness of animations
+FireMonkey in RAD Studio 13.0 integrates a new Display Link Service offering highly improved stability and smoothness of animations.
+New Display Link Service
+The new Display Link Service for FMX is now the central engine for all application animations, entirely replacing the legacy timer-based engine previously used.
+This frame-accurate system leverages the display’s actual refresh rate to synchronize and drive all UI updates and animations. By utilizing platform-native APIs such as JChoreographer (Android) and CADisplayLink (iOS), the service ensures that animation processing is tightly aligned with VSync events, resulting in smoother and more consistent visuals across all platforms.
+Note:
+Notice that this fundamental and structural change implies some changes and incompatibilities with existing code. For example, the Interval property in TAniCalculations has been removed[1], while some other properties were modified from TDateTime to Double.
 
 New IFMXSpellCheckerServiceEx interface
 
+
+a new IFMXSpellCheckerServiceEx interface, 
+
 # Skia
+
+RAD Studio Florence 13.0 release includes an update of the Skia Library integration (Skia4Delphi) to the latest version 7.0.0. This update addresses several issues and offers improvements to the Skia integration.
 
 FireMonkey Skia support including direct APIs, specific UI controls, and the automatic mapping of FireMonkey UI controls UI rendering via Skia. In general terms, Skia improves the quality of the rendering and the performance.
 
 Skia4Delphi has been updated in 13.
+https://github.com/skia4delphi/skia4delphi/releases
 
 # Réseaux et web
 
@@ -43,11 +72,49 @@ Java2OP (Java to Object Pascal bridge) API headers translation tool (for Android
 
 Deploy apps to Android devices (Debug/Play Store). The process has been improved and optimized in 12.1 and further in 13, with the adoption of newer Android platform tools.
 
+RAD Studio Florence 13.0 targets Android API level 35 by default, and includes tooling to support newer API levels in the future.
+
+The following are some additional changes:
+
+Enhanced the TTexture class to support the GL_TEXTURE_EXTERNAL_OES target.
+Reworked the Java2OP command-line tool, replacing Doclava with the new jparser command-line tool. This eliminates issues related to reimplementing APIs declared in packages exported by platform modules.
+Added getEventTimeNanos and getHistoricalEventTimeNanos to JMotionEvent in Androidapi.JNI.GraphicsContentViewText.pas.
+Updated the manifestmerger command-line tool to version 31.10.1.
+Updated the AAPT2 command-line tool to version 8.10.1.
+Updated dexter command line utility to version 1.0.1.
+Updated rclasser command line utility to version 1.0.1.
+Updated bundletool command line utility to version 1.18.1.
+Updated packager command line utility to version 1.2.1.
+
 # iOS
 
-FireMonkey Application Platform for creating iOS ARM 64-bit applications for iOS 18
+The RAD Studio Florence 13.0 release offers a significant update and expansion of the iOS and macOS platform APIs available in Delphi header files. This release also updates all iOS API headers from RTL to iOS 18.4, specific extensions include:
 
-Delphi also includes expanded iOS API headers
+Added missing NSWindow functions.
+Expanded universal links support (in iOSapi.Foundation).
+Added additional CoreText Constant Functions in iOSapi.CoreText.pas.
+Added coalescedTouchesForTouch(touch: UITouch): NSArray; cdecl; to UIEvent interface in iOSapi.UIKit.
+Added missing method declarations in UITextView and UITextField Interfaces in iOSapi.UIKit.pas.
+Added &string Method in NSAttributedString Interface in iOSapi.Foundation.pas.
+Added CVMetalTexture and CVMetalTextureCache Declarations in iOSapi.CoreVideo.pas.
+Added missing functions in Macapi.QuartzCore.pas.
+Added Interfaces and Methods in Macapi.AppKit.pas.
+Added declaration of CTFontManagerRegisterGraphicsFont in Macapi.CoreText.pas.
+Updated iosapi.CoreLocation to iOS 18.4, including support for CLVisit.
+Added the new files iOSapi.CoreMIDI, iOSapi.CoreAudioTypes.
+The iOSapi.AudioToolbox unit was updated to iOS 18.4. The AudioUnit framework has been removed because it’s deprecated, and AudioToolbox should be used instead.
+Extended the AVAudioSession object imported in iOSapi.AVFoundation.
+New header iOSapi.ImageIO.
+
+Fullscreen support for iOS. (cf Info.plist)
+
+RAD Studio now passes iOS startup parameters, which can be used for interaction with other frameworks and apps (see TApplicationEvent; FinishedLaunching).
+https://docwiki.embarcadero.com/Libraries/Florence/en/FMX.Platform.TApplicationEvent
+
+Solved issue with dictation on iOS.
+
+Added the ability to disable the bounce in a list view on iOS, using the new property TListView.Bounces. This property allows a developer to control the ability to scroll the content beyond its boundaries. It affects only the touch screen.
+https://docwiki.embarcadero.com/Libraries/Florence/en/FMX.ListView.TListViewBase.Bounces
 
 # macOS
 
@@ -58,10 +125,42 @@ FireMonkey Application Platform for creating 64-bit macOS applications for Intel
 FireMonkey for Linux UI library (FMX Linux), bringing any FireMonkey application to the Linux desktop platform(*)
 (*) Available for download in the GetIt Package Manager (not included in Community Edition)
 
-New enhanced integration with the RAD Studio IDE for FMX Linux
+FMX Linux
+For the RAD Studio Florence 13.0 release, a new version of FMX Linux is available in the GetIt packages. Also, the IDE integration of the library is now smoother.
 
 # Windows
 
 FireMonkey Application Platform for creating 32-bit Windows applications and 64-bit Windows applications for Windows 11, Windows 10; Windows Server 2025 and 2022
 
 The new release includes significant work in terms of Windows APIs cleanup, updated WinRT APIs, refreshed the WinAPI WinMD projection, and updated the WebView 2 control integrated in TEdgeBrowser. All of these updates provide an enhanced experience for Windows application developers.
+
+# Autres changements
+
+The following are additional updates and changes in FireMonkey Controls and Components.
+
+The TComboEdit component now supports typing autocomplete with an editable text configuration.
+Added a new set of properties to the TPresentedScrollBox for the user to control scroll animations, bounces, and touch interactions. The following are the new properties: AutoHide, Bounces, ScrollAnimation, ScrollDirections, and TouchTracking.
+Added the new component TApplicationEvents.
+Changed TDateTime to Double since the API now works with intervals measured in seconds. iOS’s DisplayLink works with seconds, while Android’s JChoreographer works with nanoseconds.
+Converted methods of FMX.Text.TextEditor and FMX.Text.SpellingManager to be virtual.
+Redesigned the IFMXSpellCheckerService by creating the new interface IFMXSpellCheckerServiceEx, which allows working with different languages and sentences.
+Published the HitTest property for the TGlyph component.
+Added a TextPrompt property to TMemo, used for placeholder text when the control’s text is empty. Works like the TEdit counterpart.
+Added a new OnCheckedChange event for TListBoxItem.
+Added orientation for “grip” in TSplitter style.
+Published the property of TouchTargetExpansion for TShape and other visual controls.
+TBindNavigator button icons can now be modified via styles.
+Added a new TTrackBar Reverse property, which allows the reverse of the trackbar. In addition, TTrackBar now supports mouse wheel scrolling.
+MenuItem height used to be a constant. Now, the user can add a TStyleTag object with StyleName=“height“ to the TMenuItem style and specify the menu item height in the Value property.
+TGlyph has new properties, ImageRect and Bitmap, that allow for real drawing size and coordinates.
+The FContentHeight value of the TExpander is now accessible in the ContentHeight property.
+Improved TStringGrid TPopupColumn input.
+Introduced DoStateChanged virtual methods for TRadioButton, TCheckBox, and TArcDial.
+There is a new class property Helper of type TCanvasHelper in TCustomCanvasGpu, meant for developers interested in extending the FMX library.
+The FMX.TListBoxGroupHeader now has TextSetting.Trimming.
+Added the AutoTranslate property to TMainMenu and TPopupMenu.
+Added an overloaded version of the method EvaluateJavaScript to TWebBrowser, with a TJavaScriptResultCallback parameter.
+Added a new component, TApplicationEvents, similar to the VCL counterpart.
+Update TAlignLayout to Include New Alignment Options for Centering Controls. New alignment methods include: TopCenter, TopLeft, TopRight, LeftCenter, LeftTop, LeftBottom, RightCenter, RightTop, RightBottom, BottomCenter, BottomLeft, and BottomRight.
+Added support for the 16.0 version of Emoji symbols.
+TBindNavigator now offers the option to configure specific Hints and Styles for each button, using the subproperties of the ButtonsOptions property.

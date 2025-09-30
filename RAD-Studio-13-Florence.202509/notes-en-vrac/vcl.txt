@@ -8,6 +8,10 @@ https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-flore
 
 https://blogs.embarcadero.com/introducing-the-smartcore-ai-components-pack/
 
+https://blogs.embarcadero.com/coming-in-florence-titlebar-styling-and-scrollable-actionmenus-in-vcl/
+
+https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
+
 # Compatibilité
 
 VCL (Visual Component Library) for rapidly building 32-bit and 64-bit applications for Windows 11, Windows 10; Windows Server 2025 and 2022
@@ -27,15 +31,76 @@ Support for calling WinRT APIs, with over 50 specific Object Pascal interface un
 
 The new release includes significant work in terms of Windows APIs cleanup, updated WinRT APIs, refreshed the WinAPI WinMD projection, and updated the WebView 2 control integrated in TEdgeBrowser. All of these updates provide an enhanced experience for Windows application developers.
 
-# Composants
+# TitleBar Improvements
+
+In this release, the TitleBarPanel supports custom VCL styles. This adds support for drawing styled controls in the title bar area.
+
+In addition, this release brings the following updates:
+
+* Added a new TTitleBar.StyleColors property to enable automatic use of the VCL Styles colors for background and buttons on the title bar. The support includes using the following controls: TButton, TSpeedButton, TCheckBox, TRadioButton, TToolBar, TEdit, TComboBox, TFormTabsBar, TActionToolBar, and TActionMainMenuBar.
+* Improvement in the use of the TitleBar in MDI applications.
+* Added support for Hint for customers buttons on the TitleBar.
+* HighDPI support improvements.
+* Custom Title Bars and the TitleBarPanel Component, enhanced in 13 with support for TitleBar styling
+
+
+# ControlList Improvements
+
+VCL TControlList control, a flexible and virtualized list control, designed as a high-performance control for very long lists and a modern look and feel, with support for the selection of multiple items and other enhancements.
+
+RAD Studio Florence 13.0 offers the following improvements to the ControlList component:
+
+* The ControlList component supports a new type of hosted control, the SplitButton. This implementation comes with the following:
+* The clbkSplitPushButton and clbkSplitToolButton styles for the TControlListButton control.
+* A new look for a button split drop-down area with an arrow.
+* DropDownMenu property for TControlListButton control.
+* Added a new OnGetItemHint event and a new ShowItemHint property to offer per-item hints, rather than global control hints.
+
+# Enhancements to the FormsTabsBar component
 
 TFormTabsBar control and IFormVisualManager interface to help build general tab-based UIs and a MDI tabbed forms architecture
 
-Custom Title Bars and the TitleBarPanel Component, enhanced in 13 with support for TitleBar styling
+RAD Studio Florence 13.0 offers the following improvements to the FormsTabBar component, introduced in RAD Studio 12:
+
+* Added transparency support with two new properties: Transparent and ShowBottomLine.
+* Added a new OnGetTabCaption event that makes the TFormTabsBar more flexible.
+* The TabFromPoint and TabIndexFromPoint methods are now public.
+* Added a new MouseMiddleButtonClose property to close a tab with the middle mouse button.
+
+# EdgeBrowser Updates
 
 TEdgeBrowser Component integrating Microsoft’s Chromium-based Edge WebView2 component and changes to the TWebBrowser component to support both IE and Edge– based on Microsoft release version of Edge WebView2 component and supporting custom cache folders, with support for the UserDataFolder and the ExecutableFolder configurations. Enhanced in 13.0 with additional properties and methods, mapped to features in recent versions of the WebView 2 control.
 
-VCL TControlList control, a flexible and virtualized list control, designed as a high-performance control for very long lists and a modern look and feel, with support for the selection of multiple items and other enhancements.
+This release updates the interfaces to the Microsoft WebView 2 control (aka Chromium-based Edge) to version 1.0.3296.44 of the WebView2 SDK.
+
+Also, updates the TEdgeBrowser component (and the matching demo) to support AddWebResourceRequestedFilterWithRequestSourceKinds instead of AddWebResourceRequestedFilter.
+
+# WinUI 3 Demo
+
+This release refreshes the WinUI 3 headers and the standalone WinUI 3 demo, previously available as a separate download from GetIt, and is now integrated into the core product demos.
+
+# ActionMainMenuBar Scrolling
+
+this release offers ActionMainMenuBar scrolling, another feature requested by many customers over the years.
+
+This release adds a new scrolling feature for the TActionMainMenuBar control, which is enabled when the vertical height exceeds the screen height.
+
+See an example of this feature in action below. Notice that this is also potentially used by the RAD Studio IDE, in case it’s executed on a low-resolution screen.
+
+# Autres composants
+
+The following are additional updates and changes in VCL.
+
+* Removed leftover Win98-specific support from VCL code.
+* Improved the TToggleSwitch control to make it look like a Windows 10 / Windows 11 toggle switch, updating the “Windows 10“ family of VCL styles.
+* Updated the TDragDockObject class to make the DropAlign property read/write.
+* Added a new TActionMainMenuBar.OnSelectMenuItem event to help show hints for menu items in the ActionMainMenuBar.
+* For the TCategoryButtons control, added Visible and Enabled properties of TButtonItem and TButtonCategory.
+* New TStyleManager.FormBorderSize property.
+* New TMonthCalendar.OnChange event.
+* New OnBeforeResize and OnAfterResize events added for TSplitter.
+* Added a new public function, VCLEditors.GetFormDPIForVCLEditors, to help with the development of VCL editors under HiDPI IDE.
+* TCanvas offers new overloaded methods with TPoint parameters for the following methods: AngleArc, Draw, LineTo, MoveTo, FloodFill, and TextOut.
 
 SmartCore AI Component Pack – Your Gateway to AI inside Your Apps: a new set of core AI components designed to help our customers add AI features to their apps or build brand new AI-focused apps with Delphi or C++Builder.(*)
 (*) Available for download in the GetIt Package Manager (not included in Community Edition)
