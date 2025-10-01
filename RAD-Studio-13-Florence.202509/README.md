@@ -67,7 +67,7 @@ https://www.embarcadero.com/RADAICompanion
 ## Nouveautés de l'IDE dans RAD Studio 13 Florence
 
 * vidéo de présentation sur [la chaîne YouTube de Barnsten]() et [l'instance PeerTube Apprendre Delphi]() par Patrick Prémartin
-* [le PDF de la présentation]()
+* [le PDF de la présentation](NouveautesIDERADStudio13Florence.pdf)
 
 ### Sur le blog Développeur Pascal
 
