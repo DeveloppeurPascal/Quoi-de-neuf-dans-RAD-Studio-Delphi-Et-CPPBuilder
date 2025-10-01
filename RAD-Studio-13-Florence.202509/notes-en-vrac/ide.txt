@@ -84,12 +84,13 @@ Key Pressed Event
 
 Smart CodeInsight offers an OpenTools API and developers can write plugins for additional LLM engines and APIs.
 
-Modifications sur GetIt : possbilité d'installer des paquets dans différnetes versions, menu contextuel permettant d'accéder au dossier d'installation d'un paquet, d'autres options selon les cas.
+Modifications sur GetIt : possibilité d'installer des paquets dans différentes versions, menu contextuel permettant d'accéder au dossier d'installation d'un paquet, d'autres options selon les cas.
 
 Dans la configuration des dépendances au niveau des options d'un projet il est possible de définir la version du paquet concerné.
 
 # Options
 
 Nouveau compilateur de ressources, le choix étant possible au niveau des options d'environnement
-=> utilisation par défaut de resinator https://github.com/squeek502/resinator
-=> utilisation du compilateur historique ou de celui de Microsoft possible dans les options de l'IDE
+=> resinator https://github.com/squeek502/resinator
+=> utilisation du compilateur historique de Borland ou de celui de Microsoft possible dans les options de l'IDE
+https://docwiki.embarcadero.com/RADStudio/Florence/en/Resource_Compiler_Options
