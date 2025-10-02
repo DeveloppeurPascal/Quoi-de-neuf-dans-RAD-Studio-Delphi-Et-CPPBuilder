@@ -86,11 +86,12 @@ Delphi 64-bit ARM compiler and toolchain for Android 64-bit platform (dccaarm64)
 Delphi Win64 LLDB-based debugger in the 64-bit IDE. Updated to LLDB 20.
 
 Scoped enumeration values now remain contained adequately within their declared type, avoiding conflicts in the global namespace. Also, these values are now rendered accurately in debugger views.
-Object member set values are now displayed correctly during debugging.
-Class variable names are now correctly resolved, with improved name mangling.
-Unicode variable handling has been improved; the debugger now accepts a broader range of Unicode identifiers.
 
-possibilité d'utiliser une mise en forme colorée dans les fenêtres de débogage (à activer depuis tools / options / debugger)
+Object member set values are now displayed correctly during debugging.
+
+Class variable names are now correctly resolved, with improved name mangling.
+
+Unicode variable handling has been improved; the debugger now accepts a broader range of Unicode identifiers.
 
 # Outils et assistants
 
