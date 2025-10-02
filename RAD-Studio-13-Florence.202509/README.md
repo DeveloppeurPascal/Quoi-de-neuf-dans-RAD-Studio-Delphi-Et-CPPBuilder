@@ -2,6 +2,8 @@
 
 RAD Studio 13 Florence, Delphi 13 Florence et C++Builder 13 Florence sont sortis le 10 septembre 2025. De nombreuses ressources ont été publiées avant et après leur sortie. Voici où les trouver.
 
+[Liens, vidéos, PDF en français](#en-français) [Liens, vidéos, PDF en anglais](#en-anglais-chez-embarcadero)
+
 # En anglais chez Embarcadero
 
 ## Videos
@@ -83,7 +85,8 @@ https://www.embarcadero.com/RADAICompanion
 
 ## RAD Studio 13 Florence - Delphi
 
-(vidéo et PDF en approche)
+* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://youtu.be/k-bWvTGrEME) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/jfuw3NNBG5LBTMVJWRQz2s) par Patrick Prémartin
+* [le PDF de la présentation](RADStudio13Florence-Delphi.pdf)
 
 ## Nouveautés de la RTL dans RAD Studio 13 Florence
 
