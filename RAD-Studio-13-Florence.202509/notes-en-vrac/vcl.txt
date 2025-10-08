@@ -102,8 +102,26 @@ The following are additional updates and changes in VCL.
 * Added a new public function, VCLEditors.GetFormDPIForVCLEditors, to help with the development of VCL editors under HiDPI IDE.
 * TCanvas offers new overloaded methods with TPoint parameters for the following methods: AngleArc, Draw, LineTo, MoveTo, FloodFill, and TextOut.
 
+Added a new EllipsisPosition property to the VCL TDBText component, working in the same way as with TLabel.
+https://docwiki.embarcadero.com/Libraries/Florence/en/Vcl.DBCtrls.TDBText.EllipsisPosition
+
+
 SmartCore AI Component Pack – Your Gateway to AI inside Your Apps: a new set of core AI components designed to help our customers add AI features to their apps or build brand new AI-focused apps with Delphi or C++Builder.(*)
 (*) Available for download in the GetIt Package Manager (not included in Community Edition)
+
+Added an overloaded DrpCtrls.RegisterFieldControl procedure that allows a custom setup of the created custom dataware control, see the example below:
+uses DrpCtrls;
+  RegisterFieldControl(TIntegerField, 'TDBLabeledEdit',
+    procedure (Control: TControl; DataSource: TDataSource; Field: TField)
+    var
+      LEdit: TDBLabeledEdit;
+    begin
+      LEdit := Control as TDBLabeledEdit;
+      LEdit.DataSource := DataSource;
+      LEdit.DataField := Field.FullName;
+      LEdit.EditLabel.Caption := Field.DisplayLabel;
+    end);
+
 
 # Extensions
 
