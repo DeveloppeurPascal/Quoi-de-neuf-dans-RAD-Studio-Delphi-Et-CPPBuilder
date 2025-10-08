@@ -8,6 +8,8 @@ https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-flore
 
 https://docwiki.embarcadero.com/RADStudio/Florence/en/What%27s_New
 
+https://docwiki.embarcadero.com/Status/en/FireDAC_Database_Support
+
 # SDK et APIs
 
 Support for calling WinRT APIs, with over 50 specific Object Pascal interface units. The set of headers has been updated in version 13
@@ -18,7 +20,7 @@ The new release includes significant work in terms of Windows APIs cleanup, upda
 
 # en vrac
 
-mise à jour de DUnitX en 0.4.1 (juin 2025)
+mise à jour de DUnitX en 0.4.1 (juin 2025) => en fait la 0.4.1 n'a pas été validée sur le dépôt donc c'est la version de DUnitX en 0.4.0 plus ses mises à jours au 26 juin 2025
 
 Added a case-insensitive version of the TStringHelper.Contains function.
 https://docwiki.embarcadero.com/Libraries/Florence/en/System.SysUtils.TStringHelper.Contains
@@ -39,13 +41,15 @@ The constructors for synchronization classes TMutex, TSemaphore, and TEvent now 
 There is a TStringList constructor with the signature:
 constructor Create(Options: TStringsOptions; Duplicates: TDuplicates = dupIgnore); overload;
 
+Added a new TSizeF.Zero method.
+
+For debugging deadlock scenarios, we added the WriterID property to IReadWrite/TMultiReadExclusiveWriteSynchronizer.
+
+
 #RTTI
 
 The System.RTTI unit has a new GetStorageSize function to read the number of bytes required to store a value of that type in memory.
 
-Added a new TSizeF.Zero method.
-
-For debugging deadlock scenarios, we added the WriterID property to IReadWrite/TMultiReadExclusiveWriteSync.
 
 Restructured TRttiDataMember by introducing a new intermediate class:
 * TRttiPlaceMember
@@ -67,8 +71,6 @@ https://docwiki.embarcadero.com/Libraries/Florence/en/System.JSON.TJSONValue.Get
 
 The TJSONNumber class is now inherited directly from the TJSONValue class.
 
-The TJSONString class is marked as "sealed".
-
 TJsonReader now has ReadAsUInt64.
 
 The JSON Serializer offers the option to skip properties with default values:
@@ -83,27 +85,11 @@ This section lists updates and enhancements made to the DataBase RTL:
 Added a new field type to TFieldType to support Unsigned Big Integer. There is now a TFieldType.ftLargeUint type. FireDAC supports it through Oracle and MySQL drivers, as well as the TFDMemTable.
 https://docwiki.embarcadero.com/Libraries/Florence/en/Data.DB.TFieldType
 
-Added a new EllipsisPosition property to the VCL TDBText component, working in the same way as with TLabel.
-https://docwiki.embarcadero.com/Libraries/Florence/en/Vcl.DBCtrls.TDBText.EllipsisPosition
-
 Added new DataSet properties to access the attached DataSource objects:
 * TDataSet.DataSourceCount property.
 https://docwiki.embarcadero.com/Libraries/Florence/en/Data.DB.TDataSet.DataSourceCount
 * TDataSet.DataSources property.
 https://docwiki.embarcadero.com/Libraries/Florence/en/Data.DB.TDataSet.DataSources
-
-Added an overloaded DrpCtrls.RegisterFieldControl procedure that allows a custom setup of the created custom dataware control, see the example below:
-uses DrpCtrls;
-  RegisterFieldControl(TIntegerField, 'TDBLabeledEdit',
-    procedure (Control: TControl; DataSource: TDataSource; Field: TField)
-    var
-      LEdit: TDBLabeledEdit;
-    begin
-      LEdit := Control as TDBLabeledEdit;
-      LEdit.DataSource := DataSource;
-      LEdit.DataField := Field.FullName;
-      LEdit.EditLabel.Caption := Field.DisplayLabel;
-    end);
 
 # FireDAC
 
