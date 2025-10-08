@@ -39,16 +39,13 @@ TForm.OnSafeAreaChange (?)
 
 New Display Link Service offering highly improved stability and smoothness of animations
 FireMonkey in RAD Studio 13.0 integrates a new Display Link Service offering highly improved stability and smoothness of animations.
-New Display Link Service
+New Display Link Service -> IFMXDisplayLinkService
 The new Display Link Service for FMX is now the central engine for all application animations, entirely replacing the legacy timer-based engine previously used.
 This frame-accurate system leverages the display’s actual refresh rate to synchronize and drive all UI updates and animations. By utilizing platform-native APIs such as JChoreographer (Android) and CADisplayLink (iOS), the service ensures that animation processing is tightly aligned with VSync events, resulting in smoother and more consistent visuals across all platforms.
 Note:
 Notice that this fundamental and structural change implies some changes and incompatibilities with existing code. For example, the Interval property in TAniCalculations has been removed[1], while some other properties were modified from TDateTime to Double.
 
 New IFMXSpellCheckerServiceEx interface
-
-
-a new IFMXSpellCheckerServiceEx interface, 
 
 # Skia
 
