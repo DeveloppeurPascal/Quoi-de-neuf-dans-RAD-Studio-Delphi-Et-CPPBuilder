@@ -2,7 +2,61 @@
 
 RAD Studio 13 Florence, Delphi 13 Florence et C++Builder 13 Florence sont sortis le 10 septembre 2025. De nombreuses ressources ont été publiées avant et après leur sortie. Voici où les trouver.
 
-[Liens, vidéos, PDF en français](#en-français) [Liens, vidéos, PDF en anglais](#en-anglais-chez-embarcadero)
+[Liens, vidéos, PDF en anglais](#en-anglais-chez-embarcadero) [Liens, vidéos, PDF en français](#en-français)
+
+# En français
+
+## Nouveautés de l'IDE dans RAD Studio 13 Florence
+
+* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://www.youtube.com/watch?v=m5Og_Dh2nNQ) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/p/6hiEQyLDiSpJ3v553EP2Gn?playlistPosition=3) par Patrick Prémartin
+* [le PDF de la présentation](NouveautesIDERADStudio13Florence.pdf)
+
+### Sur le blog Développeur Pascal
+
+* [Plantage de l'installation de RAD Studio 13 Florence sur "Sample Applications"](https://developpeur-pascal.fr/plantage-de-l-installation-de-rad-studio-13-florence-sur-sample-applications.html)
+
+* [Utiliser GExperts pour formater les codes sources dans Delphi 13 Florence](https://developpeur-pascal.fr/utiliser-gexperts-pour-formater-les-codes-sources-dans-delphi-13-florence.html)
+
+* [Utiliser MMX Code Explorer pour remplacer les outils de refactoring retirés de Delphi 13 Florence](https://developpeur-pascal.fr/utiliser-mmx-code-explorer-pour-remplacer-les-outils-de-refactoring-retires-de-delphi-13-florence.html)
+
+## RAD Studio 13 Florence - C++Builder
+
+* [Les nouveautés de C++Builder 13 Florence](PresentationCppBuilder13Florence.pdf) par Laurent Navarro (PDF)
+* [Nouveautés C++ Builder 13, récapitulatif des nouveautés 12 à 12.3 et découverte du Time Travel debugging](https://lnavarro.developpez.com/tutoriels/bcb13/)
+
+## RAD Studio 13 Florence - Delphi
+
+* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://www.youtube.com/watch?v=k-bWvTGrEME) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/p/6hiEQyLDiSpJ3v553EP2Gn?playlistPosition=2) par Patrick Prémartin
+* [le PDF de la présentation](RADStudio13Florence-Delphi.pdf)
+
+## Nouveautés de la RTL dans RAD Studio 13 Florence
+
+* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://www.youtube.com/watch?v=wBBDp_7J2Q4) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/p/6hiEQyLDiSpJ3v553EP2Gn?playlistPosition=3) par Patrick Prémartin
+* [le PDF de la présentation](NouveautesRTLRADStudio13Florence.pdf)
+
+### Sur le blog Développeur Pascal
+
+* [Bye bye Windows 98 !!!](https://developpeur-pascal.fr/bye-bye-windows-98.html)
+
+## Nouveautés de la VCL dans RAD Studio 13 Florence
+
+(vidéo et PDF en approche)
+
+## Nouveautés de FireMonkey dans RAD Studio 13 Florence
+
+(vidéo et PDF en approche)
+
+### Sur le blog Développeur Pascal
+
+* [iOS 26 réclame le framework _LocationEssentials](https://developpeur-pascal.fr/ios-26-reclame-le-framework-_locationessentials.html)
+
+## RAD Studio 13 Florence et le web
+
+(vidéo et PDF en approche)
+
+## RAD Studio 13 Florence et l'IA
+
+(vidéo et PDF en approche)
 
 # En anglais chez Embarcadero
 
@@ -63,55 +117,3 @@ https://blogs.embarcadero.com/introducing-the-smartcore-ai-components-pack/
 https://docwiki.embarcadero.com/RADStudio/Florence/en/SmartCore_AI_Component_Pack
 
 https://www.embarcadero.com/RADAICompanion
-
-# En français
-
-## Nouveautés de l'IDE dans RAD Studio 13 Florence
-
-* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://youtu.be/m5Og_Dh2nNQ) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/v1YmrqFN5stugnKwSz7tvK) par Patrick Prémartin
-* [le PDF de la présentation](NouveautesIDERADStudio13Florence.pdf)
-
-### Sur le blog Développeur Pascal
-
-* [Plantage de l'installation de RAD Studio 13 Florence sur "Sample Applications"](https://developpeur-pascal.fr/plantage-de-l-installation-de-rad-studio-13-florence-sur-sample-applications.html)
-
-* [Utiliser GExperts pour formater les codes sources dans Delphi 13 Florence](https://developpeur-pascal.fr/utiliser-gexperts-pour-formater-les-codes-sources-dans-delphi-13-florence.html)
-
-* [Utiliser MMX Code Explorer pour remplacer les outils de refactoring retirés de Delphi 13 Florence](https://developpeur-pascal.fr/utiliser-mmx-code-explorer-pour-remplacer-les-outils-de-refactoring-retires-de-delphi-13-florence.html)
-
-## RAD Studio 13 Florence - C++Builder
-
-* [Les nouveautés de C++Builder 13 Florence](PresentationCppBuilder13Florence.pdf) par Laurent Navarro (PDF)
-
-## RAD Studio 13 Florence - Delphi
-
-* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://youtu.be/k-bWvTGrEME) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/jfuw3NNBG5LBTMVJWRQz2s) par Patrick Prémartin
-* [le PDF de la présentation](RADStudio13Florence-Delphi.pdf)
-
-## Nouveautés de la RTL dans RAD Studio 13 Florence
-
-(vidéo et PDF en approche)
-
-### Sur le blog Développeur Pascal
-
-* [Bye bye Windows 98 !!!](https://developpeur-pascal.fr/bye-bye-windows-98.html)
-
-## Nouveautés de la VCL dans RAD Studio 13 Florence
-
-(vidéo et PDF en approche)
-
-## Nouveautés de FireMonkey dans RAD Studio 13 Florence
-
-(vidéo et PDF en approche)
-
-### Sur le blog Développeur Pascal
-
-* [iOS 26 réclame le framework _LocationEssentials](https://developpeur-pascal.fr/ios-26-reclame-le-framework-_locationessentials.html)
-
-## RAD Studio 13 Florence et le web
-
-(vidéo et PDF en approche)
-
-## RAD Studio 13 Florence et l'IA
-
-(vidéo et PDF en approche)
