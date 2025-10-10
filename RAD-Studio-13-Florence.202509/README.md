@@ -40,7 +40,8 @@ RAD Studio 13 Florence, Delphi 13 Florence et C++Builder 13 Florence sont sortis
 
 ## Nouveautés de la VCL dans RAD Studio 13 Florence
 
-(vidéo et PDF en approche)
+* vidéo de présentation sur [la chaîne YouTube de Barnsten](https://www.youtube.com/watch?v=UGzpcKojbqA) et [l'instance PeerTube Apprendre Delphi](https://videos.apprendre-delphi.fr/w/p/6hiEQyLDiSpJ3v553EP2Gn?playlistPosition=4) par Patrick Prémartin
+* [le PDF de la présentation](NouveautesVCLRADStudio13Florence.pdf)
 
 ## Nouveautés de FireMonkey dans RAD Studio 13 Florence
 
