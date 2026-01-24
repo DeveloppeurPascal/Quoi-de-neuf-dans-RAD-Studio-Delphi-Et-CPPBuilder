@@ -1,3 +1,8 @@
+Redesigned the IFMXSpellCheckerService by creating the new interface IFMXSpellCheckerExService, which allows working with different languages and sentences.
+
+
+
+
 Nouveautés de FireMonkey dans RAD Studio 13 Florence
 
 -----
@@ -28,6 +33,8 @@ RAD Studio Florence 13.0 introduces a new MaskEdit control for FireMonkey that i
 Unlike the VCL counterpart, in the FMX TMaskEdit implementation, an exception is not raised if the current value in the MaskEdit is not valid. Instead, it is recommended to use the OnValidateError event. This event allows the developer to provide any visual feedback to the user about an invalid value. If the value is still incorrect after the focus reset, it remains in the invalid state, and the OnChange event is not triggered until the value becomes valid.
 
 additional TPresentedScrollBox properties to control scroll animation, bounces, and touch interaction
+Added a new set of properties to the TPresentedScrollBox for the user to control scroll animations, bounces, and touch interactions. The following are the new properties: AutoHide, Bounces, ScrollAnimation, ScrollDirections, and TouchTracking.
+=> added in 12.x Athens, not in Florence
 
 updated TAlignLayout to include new alignment options for centering controls
 
@@ -45,7 +52,7 @@ This frame-accurate system leverages the display’s actual refresh rate to sync
 Note:
 Notice that this fundamental and structural change implies some changes and incompatibilities with existing code. For example, the Interval property in TAniCalculations has been removed[1], while some other properties were modified from TDateTime to Double.
 
-New IFMXSpellCheckerServiceEx interface
+Redesigned the IFMXSpellCheckerService by creating the new interface IFMXSpellCheckerExService, which allows working with different languages and sentences.
 
 # Skia
 
@@ -53,7 +60,7 @@ RAD Studio Florence 13.0 release includes an update of the Skia Library integrat
 
 FireMonkey Skia support including direct APIs, specific UI controls, and the automatic mapping of FireMonkey UI controls UI rendering via Skia. In general terms, Skia improves the quality of the rendering and the performance.
 
-Skia4Delphi has been updated in 13.
+Skia4Delphi 7.0 has been updated in 13.
 https://github.com/skia4delphi/skia4delphi/releases
 
 # Réseaux et web
@@ -136,7 +143,7 @@ The new release includes significant work in terms of Windows APIs cleanup, upda
 The following are additional updates and changes in FireMonkey Controls and Components.
 
 The TComboEdit component now supports typing autocomplete with an editable text configuration.
-Added a new set of properties to the TPresentedScrollBox for the user to control scroll animations, bounces, and touch interactions. The following are the new properties: AutoHide, Bounces, ScrollAnimation, ScrollDirections, and TouchTracking.
+
 Added the new component TApplicationEvents.
 Changed TDateTime to Double since the API now works with intervals measured in seconds. iOS’s DisplayLink works with seconds, while Android’s JChoreographer works with nanoseconds.
 Converted methods of FMX.Text.TextEditor and FMX.Text.SpellingManager to be virtual.
