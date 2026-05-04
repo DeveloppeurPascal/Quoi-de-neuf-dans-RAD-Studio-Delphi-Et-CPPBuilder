@@ -1,0 +1,19 @@
+What's New in RAD Studio 13.1 Florence
+https://www.embarcadero.com/products/rad-studio/whats-new-in-13-florence
+
+Announcing the Availability of RAD Studio 13 Florence Update 1
+https://blogs.embarcadero.com/announcing-the-availability-of-rad-studio-13-florence-update-1/
+
+RAD Studio 13 Florence - Release 1
+https://docwiki.embarcadero.com/RADStudio/Florence/en/13_Florence_-_Release_1
+
+New features and customer reported issues fixed in RAD Studio 13.1
+https://docwiki.embarcadero.com/RADStudio/Florence/en/New_features_and_customer_reported_issues_fixed_in_RAD_Studio_13.1
+
+RAD STUDIO 13.1 PRODUCT FEATURE MATRIX
+https://www.embarcadero.com/docs/rad-studio-feature-matrix.pdf
+
+
+Florence 13 1 launch webinar replay - no Q & A
+https://youtu.be/VgzQv7Unpss
+
